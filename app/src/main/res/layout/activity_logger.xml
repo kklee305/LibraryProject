@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".LoggerPlatform">
+
+    <Button
+        android:id="@+id/test_v"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logger.v"/>
+
+    <Button
+        android:id="@+id/test_d"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logger.d"/>
+
+    <Button
+        android:id="@+id/test_i"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logger.i"/>
+
+    <Button
+        android:id="@+id/test_w"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logger.w"/>
+
+    <Button
+        android:id="@+id/test_e"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logger.e"/>
+
+    <Button
+        android:id="@+id/test_wtf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logger.wtf"/>
+
+    <Button
+        android:id="@+id/view_log_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Log"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/log_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </ScrollView>
+
+</LinearLayout>
