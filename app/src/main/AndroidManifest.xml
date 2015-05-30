@@ -18,6 +18,8 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".ImageViewPlatform.ImageViewPlatform"
+                  android:label="ImageViewPlatform"/>
         <activity android:name=".LoggerPlatform.LoggerPlatform"
                   android:label="LoggerPlatform"/>
     </application>
