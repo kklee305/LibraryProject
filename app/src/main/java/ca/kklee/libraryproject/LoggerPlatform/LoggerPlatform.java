@@ -1,14 +1,11 @@
 package ca.kklee.libraryproject.LoggerPlatform;
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import com.kklee.utilities.Logger.Logger;
-import com.kklee.utilities.Logger.ViewLogDialogFactory;
 
 import ca.kklee.libraryproject.BuildConfig;
 import ca.kklee.libraryproject.R;
@@ -37,12 +34,11 @@ public class LoggerPlatform extends Activity {
         Logger.setIsLogging(BuildConfig.DEBUG);
         Logger.setLogToFile(getApplicationContext());
 
-        final SharedPreferences pref = getSharedPreferences(Logger.LOGGER_SHARED_PREF, Context.MODE_PRIVATE);
         final Activity activity = this;
         viewLog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ViewLogDialogFactory.showDialog(activity, pref.getString(Logger.LOGGER_SHARED_PREF, ""));
+                Logger.showDialog(activity);
             }
         });
 
