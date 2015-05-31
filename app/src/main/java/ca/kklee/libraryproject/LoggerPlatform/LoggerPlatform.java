@@ -6,9 +6,9 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
-import com.kklee.utilities.Logger;
+import com.kklee.utilities.Logger.Logger;
+import com.kklee.utilities.Logger.ViewLogDialogFactory;
 
 import ca.kklee.libraryproject.BuildConfig;
 import ca.kklee.libraryproject.R;
@@ -37,12 +37,12 @@ public class LoggerPlatform extends Activity {
         Logger.setIsLogging(BuildConfig.DEBUG);
         Logger.setLogToFile(getApplicationContext());
 
-        final TextView tv = (TextView) findViewById(R.id.log_view);
         final SharedPreferences pref = getSharedPreferences(Logger.LOGGER_SHARED_PREF, Context.MODE_PRIVATE);
+        final Activity activity = this;
         viewLog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tv.setText(pref.getString(Logger.LOGGER_SHARED_PREF, ""));
+                ViewLogDialogFactory.createDialog(activity, pref.getString(Logger.LOGGER_SHARED_PREF, "")).show();
             }
         });
 
