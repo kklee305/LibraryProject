@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.kklee.utilities.Logger.Logger;
+import com.kklee.utilities.Logger;
 
 import ca.kklee.libraryproject.BuildConfig;
 import ca.kklee.libraryproject.R;
