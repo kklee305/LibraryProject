@@ -42,7 +42,7 @@ public class LoggerPlatform extends Activity {
         viewLog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ViewLogDialogFactory.createDialog(activity, pref.getString(Logger.LOGGER_SHARED_PREF, "")).show();
+                ViewLogDialogFactory.showDialog(activity, pref.getString(Logger.LOGGER_SHARED_PREF, ""));
             }
         });
 
