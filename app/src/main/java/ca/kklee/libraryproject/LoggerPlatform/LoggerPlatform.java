@@ -58,6 +58,7 @@ public class LoggerPlatform extends Activity {
         if (button == null) {
             return;
         }
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -75,9 +76,10 @@ public class LoggerPlatform extends Activity {
                         Logger.w(message);
                         break;
                     case R.id.test_e:
-                        Logger.e(message);
+                        TestException e = new TestException("testing exception");
+                        Logger.e(message, e);
                         break;
-                    case R.id.test_wtf:
+                    default:
                         Logger.wtf(message);
                         break;
                 }
