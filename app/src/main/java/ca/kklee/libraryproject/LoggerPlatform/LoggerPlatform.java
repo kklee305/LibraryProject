@@ -63,7 +63,7 @@ public class LoggerPlatform extends Activity {
                         Logger.v("%s",message);
                         break;
                     case R.id.test_d:
-                        Logger.d(message);
+                        Logger.d("%s, %i, %d", message, 1, 2);
                         break;
                     case R.id.test_i:
                         Logger.i(message);
