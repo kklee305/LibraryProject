@@ -60,7 +60,7 @@ public class LoggerPlatform extends Activity {
             public void onClick(View view) {
                 switch (button.getId()) {
                     case R.id.test_v:
-                        Logger.v(message);
+                        Logger.v("%s",message);
                         break;
                     case R.id.test_d:
                         Logger.d(message);
@@ -73,10 +73,10 @@ public class LoggerPlatform extends Activity {
                         break;
                     case R.id.test_e:
                         TestException e = new TestException("testing exception");
-                        Logger.e(message, e);
+                        Logger.e("%s", e, message);
                         break;
                     default:
-                        Logger.wtf(message);
+                        Logger.wtf("%s", message);
                         break;
                 }
 
